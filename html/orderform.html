@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bob's Auto Parts</title>
+  </head>
+  <body>
+    <form action="/php/processorder.php" method="post">
+      <table style="border: 0px">
+        <tr style="background: #cccccc">
+          <th style="width: 150px; text-align: center">Item</th>
+          <th style="width: 100px; text-align: center">Quantity</th>
+        </tr>
+        <tr>
+          <td>Tires</td>
+          <td>
+            <input
+              type="text"
+              name="tireqty"
+              size="3"
+              maxlength="3"
+              style="width: 100px"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Oil</td>
+          <td>
+            <input
+              type="text"
+              name="oilqty"
+              size="3"
+              maxlength="3"
+              style="width: 100px"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>Spark Plugs</td>
+          <td>
+            <input
+              type="text"
+              name="sparkqty"
+              size="3"
+              maxlength="3"
+              style="width: 100px"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>How did you find Bob's Auto Parts?</td>
+          <td>
+            <select name="find">
+              <option value="a">I’m a regular customer</option>
+              <option value="b">TV advertising</option>
+              <option value="c">Phone directory</option>
+              <option value="d">Word of mouth</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center; padding-top: 20px">
+            <input
+              type="submit"
+              value="Submit Order"
+              style="
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                background-color: #228be6;
+                color: white;
+                font-size: 16px;
+              "
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <div style="padding-top: 10rem">
+      <a href="/php/freight.php">GO TO BOB'S FREIGHT PAGE</a>
+    </div>
+  </body>
+</html>

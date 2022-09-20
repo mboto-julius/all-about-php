@@ -10,7 +10,7 @@ class Fruit
     $this->color = $color;
    }
 
-   public function intro(){
+   protected function intro(){
     echo "The fruit is {$this->name} and the color is {$this->color}.";
    }
 }
@@ -20,11 +20,12 @@ class Fruit
 class Strawberry extends Fruit{
     public function message(){
         echo "Am I a fruit or a berry?";
+        echo "<br>";
+        $this->intro();
     }
 }
 
 
 $strawberry = new Strawberry("Strawberry", "red");
 $strawberry->message();
-echo "<br>";
 $strawberry->intro();

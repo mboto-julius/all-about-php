@@ -3,9 +3,9 @@
 
 class Person {
     // Properties
-    public $name;
-    public $eyeColor;
-    public $age;
+    private $name;
+    private $eyeColor;
+    private $age;
     
     public function __construct($name, $eyeColor, $age){
         $this->name = $name;

@@ -1,4 +1,10 @@
-<?php include 'includes/person.php'; ?>
+<?php 
+
+// include 'includes/autoloader.php';
+include('includes/autoloader.php');
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +30,9 @@
   // creating an object
   $person1 = new Person("Daniel", "Blue", 28);
   echo $person1->getDrinkingAge();
+
+  echo Car::$name;
+  echo "<br>";
 
   ?>
 

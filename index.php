@@ -14,15 +14,17 @@
 
   <?php 
 
-     $person1 = new Person();
-     $person1->setName("Daniel");
-     echo $person1->name; 
-
+     $person1 = new Person("julius", "blue", 28); 
+     echo $person1->name;
      echo "<br>";
+     echo $person1->eyeColor;
+     echo "<br>";
+     echo $person1->age;
+     echo "<br>";
+    //  we can still reference the method and set the name
+     $person1->setName("John");
+     echo $person1->name;
 
-     $person2 = new Person();
-     $person2->setName("Timmy");
-     echo $person2->name; 
 
   ?>
 

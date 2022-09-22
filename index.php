@@ -13,11 +13,17 @@
 <body>
 
   <?php 
+  
+  echo Person::$drinkingAge;
+  echo "<br>";
 
-     $person1 = new Person("julius", "blue", 28); 
-     echo $person1->getName();
+  Person::setDrinkingAge(21);
+  echo Person::$drinkingAge;
+  echo "<br>";
 
-
+  // creating an object
+  $person1 = new Person("Daniel", "Blue", 28);
+  echo $person1->getDrinkingAge();
 
   ?>
 

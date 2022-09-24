@@ -5,34 +5,16 @@ class Cars{
 
   function greating(){
 
-  }
+    echo "Hello Student";
 
-  function greating1(){
-
-  }
-
-  function greating2(){
-    
-  }
-
-  function greating3(){
-    
   }
 
 }
 
-// $my_classes = get_declared_classes();
+// instantiating a class
+$bmw = new Cars();
 
-// foreach($my_classes as $class){
-//   echo $class . "<br>";
-// }
+$mercedes = new Cars();
 
-// getting methods of classes
-
-$the_methods = get_class_methods('Cars');
-
-foreach ($the_methods as $method){
-  echo $method . "<br>";
-}
-
-?>
+// output from function
+$bmw->greating();

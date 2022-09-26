@@ -14,7 +14,7 @@ Thats it!!!!
 
 ### Please note that!
 
-Also there is a database called users having id, username and password columns, so you have to create your own database!
+Also there is a database called studentcrud having id, name, phone, email, and course columns, so you have to create your own database!
 
 ## Author
 

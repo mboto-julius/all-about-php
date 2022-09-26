@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,6 +12,9 @@
   <body>
 
     <div class="container mt-5">
+        
+        <?php include('message.php'); ?>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -20,7 +24,7 @@
                         </h4>
                     </div>
                     <div class="card-body">
-                        <form action="" method="POST">
+                        <form action="code.php" method="POST">
                             <div class="mb-3">
                                 <label>Name</label>
                                 <input type="text" name="name" class="form-control">

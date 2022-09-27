@@ -3,6 +3,27 @@
 session_start();
 require 'dbconnection.php';
 
+// delete data
+if(isset($_POST['delete'])){
+    $id = mysqli_real_escape_string($connection, $_POST['delete']);
+
+    $query = "DELETE FROM students WHERE id='$id'";
+
+    $query = mysqli_query($connection, $query);
+
+    if($query)
+    {
+        $_SESSION['message'] = "student deleted successfully";
+        header("Location: index.php");
+        exit(0);
+    }else{
+        $_SESSION['message'] = "student not deleted";
+        header("Location: index.php");
+        exit(0);
+    }
+}
+
+
 // update data into the database
 if(isset($_POST['update']))
 {
@@ -21,12 +42,13 @@ if(isset($_POST['update']))
 
     if($query){
         $_SESSION['message'] = "student updated successfully";
-        header("location: index.php");
+        header("Location: index.php");
         exit(0);
     }
     else{
         $_SESSION['message'] = "student not updated";
-        header("location: index.php");
+        header("Location: index.php");
+        exit(0);
     }
 }
 
@@ -44,12 +66,13 @@ if(isset($_POST['save']))
 
     if($query){
         $_SESSION['message'] = "student created successfully";
-        header("location: student-create.php");
+        header("Location: student-create.php");
         exit(0);
     }
     else{
         $_SESSION['message'] = "student not created";
-        header("location: student-create.php");
+        header("Location: student-create.php");
+        exit(0);
     }
 }
 

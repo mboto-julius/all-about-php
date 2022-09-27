@@ -20,7 +20,7 @@ require 'dbconnection.php';
   <body>
 
     <div class="container mt-5">
-      <!-- message appear for update field -->
+      <!-- message appear  -->
       <?php include('message.php'); ?>
        
       <div class="row">
@@ -63,14 +63,16 @@ require 'dbconnection.php';
                         <td>
                           <a href="student-view.php?id=<?= $student['id']; ?>" class="btn btn-info btn-sm">View</a>
                           <a href="student-edit.php?id=<?= $student['id']; ?>" class="btn btn-success btn-sm">Edit</a>
-                          <a href="" class="btn btn-danger btn-sm">Delete</a>
+                          <form action="code.php" method="POST" class="d-inline">
+                              <button type="submit" name="delete" value="<?=$student['id'];?>" class="btn btn-danger btn-sm">Delete</button>
+                          </form>
                         </td>
                       </tr>
                   <?php
                     }
                   }else{
                     echo "<h5>No records found</h5>";
-                  }
+                 ; }
                   ?>
                 </tbody>
               </table>
